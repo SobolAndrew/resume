@@ -21,6 +21,7 @@
                     {{/each}}
                 </address>
             </div>
+            <br>
             <hr>
 
             <section>
@@ -66,127 +67,114 @@
 
             </section>
             <hr>
-
-            {{> title data="Employees:"}}
-            <ul>{{#with employees.[0]}} <div>
+            <br>
+            <section>
+                {{> title data="Employees:"}}
+                {{#with employees.[0]}} <div>
+                    <p><b>Name</b>: {{name}}</p>
+                </div>
+                <div>
+                    <p><b>Position</b>: {{position}}</p>
+                </div>
+                <div>
+                    <p><b>Department</b>: {{department}}</p>
+                </div>
+            </section>
+            <br>
+            <hr>
+            <section>
+                {{> title data="Projects:"}}
+                {{#with projects.[0]}} <div>
                     <p><b>name</b>: {{name}}</p>
                 </div>
                 <div>
-                    <p><b>position</b>: {{position}}</p>
+                    <p>
+                        <b>Description: </b>{{description}}
+                    </p>
                 </div>
                 <div>
-                    <p><b>department</b>: {{department}}</p>
+                    <p><b>Status</b>: {{status}}</p>
                 </div>
-            </ul>
+            </section>
             <br>
-            {{> title data="Projects:"}}
-            <ul> {{#with projects.[0]}} <div>
-                    <p><b>name</b>: {{name}}</p>
+            <hr>
+            <section>
+                {{> title data="Team: "}}
+                {{#with teams.[0]}}
+
+                <div>
+                    <p><b>Team name: </b>"{{team_name}}"</p>
+                </div>
+
+                {{#with team_leader}}
+
+                <div>
+                    <p> {{name}} ({{title}})</p>
                 </div>
                 <div>
-                    <p><b>description</b>: {{description}}</p>
+                    <p><a href="john.smith@example.com">{{email}}</a></p>
                 </div>
-                <div>
-                    <p><b>status</b>: {{status}}</p>
-                </div>
-            </ul>
+                {{/with}}
+            </section>
             <br>
-            {{> title data="Teams:"}}
-            <ul> {{#with teams.[0]}}
+            <hr>
+            <section>
+                {{> title data="Members:"}}
+                {{#with team_members.[0]}}
 
                 <div>
-                    <p><b>Team:</b>"{{team_name}}"</p>
+                    <p>{{name}} ({{title}})</p>
+                </div>
+                <div>
+
+                    <a href="alice.johnson@example.com">{{email}}</a>
+
+                </div>
+                <div>
+                    <p><b>skills: </b>{{skills}} </p>
+                </div>
+            </section>
+            <br>
+            <hr>
+            <section>
+                {{> title data='Projects:'}}
+                {{#with projects.[0]}}
+
+                <div>
+                    <p><b>Team: </b>"{{name}}"</p>
                 </div>
 
-                <ul> {{#with team_leader}}
 
-                    <div>
-                        <p><b>name: </b>{{name}}</p>
-                    </div>
 
-                    <div>
-                        <p><b>title: </b>{{title}}</p>
-                    </div>
-                    <div>
-                        <a href="john.smith@example.com">{{email}}</a>
-                    </div>
-                    {{/with}}
-                </ul>
-                <br>
-                <h4>Members:</h4>
-                <ul>{{#with team_members.[0]}}
+                <div>
+                    <b>description: </b><q>{{description}}</q>
+                </div>
 
-                    <div>
-                        <p><b>name: </b>{{name}}</p>
-                    </div>
-
-                    <div>
-                        <p><b>title: </b>{{title}}</p>
-                    </div>
-                    <div>
-                        <a href="alice.johnson@example.com">{{email}}</a>
-                    </div>
-                    <div>
-                        <p><b>skills: </b>{{skills}} </p>
-                    </div>
-                </ul>
-
-                <br>
+                <div>
+                    <p><b>technologies: </b>{{technologies}}</p>
+                </div>
+            </section>
+            <br>
+            <hr>
+            <section>
+                {{> title data='Team members:'}}
+                {{#each team_members}}
                 <ul>
-                    <h4>Projects:</h4>
-                    {{#with projects.[0]}}
-                    <ul>
+                    <li>
                         <div>
-                            <p><b>Team:</b>"{{name}}"</p>
+                            <p>{{name}} ({{title}})</p>
                         </div>
-
-
-
-                        <div>
-                            <p><b>description:</b>{{description}}</p>
-                        </div>
-
-                        <div>
-                            <p><b>technologies: </b>{{technologies}}</p>
-                        </div>
-
-                    </ul>
-                    <br>
-                    <h4>Team members:</h4>
-                    {{#each team_members}}
-                    <ul>
-                        <li>
-                            <div>
-                                <p>{{name}} </p>
-                            </div>
-
-                            <div>
-                                <p>{{title}}</p>
-                            </div>
-                        </li>
-
-                    </ul>
-                    {{/each}}
-                    {{/with}}
-                    {{/with}}
-
-
-
+                    </li>
                 </ul>
+                {{/each}}
+            </section>
 
-                {{/with}}
-
-
-
-                {{/with}}
-                {{/with}}
-
-
-
-
-                {{/with}}
-
-
+            {{/with}}
+            {{/with}}
+            {{/with}}
+            {{/with}}
+            {{/with}}
+            {{/with}}
         </header>
     </main>
     {{/with}}
