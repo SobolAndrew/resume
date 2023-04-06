@@ -1,7 +1,6 @@
 <div>
     {{#with person}}
     <main>
-
         <header>
             <div>
                 <h1>{{name}}</h1>
@@ -23,7 +22,6 @@
             </div>
             <br>
             <hr>
-
             <section>
                 {{> title data="Education:" big=true}}
                 {{#with education}}
@@ -64,10 +62,8 @@
                 <div>
                     <p><b>Industry</b>: {{industry}}</p>
                 </div>
-
             </section>
-            <hr>
-            <br>
+            <hr><br>
             <section>
                 {{> title data="Employees:"}}
                 {{#with employees.[0]}} <div>
