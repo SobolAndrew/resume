@@ -1,0 +1,97 @@
+<div>
+    <h1>Program</h1>
+
+    {{#with program}}
+
+    <h2>Excursion</h2>
+    {{#with excursion}}
+
+    <h3><em>{{name}}</em> </h3>
+    <b>Location:</b> {{#with location}}{{city}}, {{country}}{{/with}}<br>
+    <date>{{date}}</date><br>
+
+    <h4>Program:</h4>
+    <ul>{{#each program}}
+        <li>
+
+            <b>Name:</b> {{name}}<br>
+            <b>Type:</b> {{type}}<br>
+            <b>Duration:</b> {{duration}}<br>
+
+            <ul>
+                <h4>Details:</h4>
+                <li>
+                    {{#with details}}
+                    {{#if museum}}{{#with museum}}
+                    Museum: {{name}}<br>
+                    Location: {{#with location}}
+                    {{address}}, {{city}}, {{ountry}}
+                    {{/with}} {{!-- with_location --}}
+                    <br>
+                    <ol>
+                        <h5>Exhibits:</h5>
+                        {{#each exhibits}}<li>
+
+                            Name: {{name}},<br>
+                            {{#if artist}}Artist: {{artist}}<br>{{/if}}
+                            Description: {{description}}<br>
+                            {{#if audio_guide}}audio_guide:{{/if}}
+
+                        </li><br>
+                        {{/each}} {{!-- each_exhibits --}}
+                        {{#with ../guide}}
+                        name: {{name}}<br>
+                        language: {{language}}<br>
+                        rating: {{rating}}<br>
+                        {{/with}} {{!-- each_../guide --}}
+                    </ol>
+
+                    {{/with}} {{!-- with_museum --}}
+
+
+                    {{/if}} {{!-- if_museum --}}
+
+                    {{!-- //============================= --}}
+
+                    {{#if venue}}{{#with venue}}
+                    Venue: {{name}}<br>
+                    Location: {{#with location}}
+                    {{address}}, {{city}}, {{ountry}}
+                    {{/with}} {{!-- with_location --}}
+                    <br>
+                    <ol>
+                        <h5>Performers:</h5>
+                        {{#each ../performers}}<li>
+
+                            Name: {{name}},<br>
+
+                            Type: {{type}}<br>
+
+
+                        </li><br>
+                        {{/each}} {{!-- each_performers: --}}
+                        {{#with ../guide}}
+                        name: {{name}}<br>
+                        language: {{language}}<br>
+                        rating: {{rating}}<br>
+                        {{/with}} {{!-- each_../guide --}}
+                    </ol>
+
+                    {{/with}} {{!-- with_venue --}}
+
+
+                    {{/if}} {{!-- if_venue --}}
+                    {{/with}}{{!-- with_details --}}
+
+
+
+
+                </li>
+            </ul>
+        </li><br>
+        {{/each}} {{!-- each_program_2 --}}
+    </ul>
+    {{/with}} {{!-- with_excursion --}}
+
+    {{/with}}{{!-- with_program_1 --}}
+</div>
