@@ -1,0 +1,102 @@
+<div>
+    <h1>Web</h1>
+    {{#with web}}
+    <h2>Languages:</h2>
+    <ol>
+        {{#each languages}}
+
+        {{!-- ========================================================= --}}
+
+        {{#if elements}}
+        <li>
+            <h3><mark>{{name}}</mark></h3><br>
+            Version: {{version}}<br>
+            Description: <em>{{description}}</em><br>
+
+            <h3>Elements:</h3>
+            <ul> {{#each elements}}
+                <li>
+                    <b>Name:</b> <mark>{{name}}</mark><br>
+                    Description: <em>{{description}}</em><br>
+
+                    <h3>Attributes:</h3>
+                    <ul>{{#each attributes}}
+                        <li>
+                            Name: {{name}}<br>
+                            Description: {{Description}}
+                        </li><br>
+                        {{/each}} {{!-- each_attributes --}}
+                    </ul>
+                </li><br>
+                {{/each}} {{!-- each_elements --}}
+            </ul>
+        </li><br>
+        <hr><br>
+        {{/if}} {{!-- if_html --}}
+
+        {{!-- ========================================================= --}}
+
+        {{#if properties}}
+        <li>
+            <h3><mark>{{name}}</mark></h3><br>
+            Version: {{version}}<br>
+            Description: <em>{{description}}</em><br>
+
+            <h3>Properties:</h3>
+            <ul> {{#each properties}}
+                <li>
+                    <b>Name:</b> <mark>{{name}}</mark><br>
+                    Description: <em>{{description}}</em><br>
+
+                    <h3>Values:</h3>
+                    <ul>{{#each values}}
+                        <li>
+                            Value: {{value}}<br>
+                            Description: {{Description}}
+                        </li><br>
+                        {{/each}} {{!-- each_values --}}
+                    </ul>
+                </li><br>
+                {{/each}} {{!-- each_properties --}}
+            </ul>
+        </li><br>
+        <hr><br>
+        {{/if}} {{!-- if_properties --}}
+
+        {{!-- ========================================================= --}}
+
+
+        {{#if functions}}
+        <li>
+            <h3><mark>{{name}}</mark></h3><br>
+            Version: {{version}}<br>
+            Description: <em>{{description}}</em><br>
+
+            <h3>Functions:</h3>
+            <ul> {{#each functions}}
+                <li>
+                    <b>Name:</b> <mark>{{name}}</mark><br>
+                    Description: <em>{{description}}</em><br>
+
+                    <h3>Description:</h3>
+                    <ul>{{#each parameters}}
+                        <li>
+                            Name: {{name}}<br>
+                            Type: {{type}}<br>
+                            Description: {{Description}}
+                        </li><br>
+                        {{/each}} {{!-- each_parameters --}}
+                    </ul>
+                </li><br>
+                {{/each}} {{!-- each_description --}}
+            </ul>
+        </li><br>
+
+        {{/if}} {{!-- if_functions --}}
+
+        {{!-- ========================================================= --}}
+
+        {{/each}} {{!-- each_languages --}}
+    </ol>
+    {{/with}} {{!-- with_web --}}
+</div>
