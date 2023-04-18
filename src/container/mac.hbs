@@ -1,0 +1,140 @@
+<div>
+    <main>
+        <section>
+            {{> title data='Noteook' big=true}}
+
+            <div class="card mb-3"><br>
+                <img src="https://content.rozetka.com.ua/goods/images/big/229718179.jpg" class="card-img-top"
+                    alt="Apple MacBook Pro">
+                <div class="card-body"><br>
+                    <h5 class="card-title">{{name}}</h5>
+                    <p class="card-text">{{description}}</p>
+
+                    <p class="card-text">Category: {{category}} </p>
+                    <a href="#" class="btn btn-outline-success" class="card-text text-end">Price:
+                        {{price}}</a>
+
+                </div>
+                <hr>
+
+                <h3 class="card-body">Features</h3><br>
+                <div class="card-body"> {{#with features}}
+                    <b>Processor</b>
+                    {{#with processor}}<ul>
+
+                        <li>Brand: {{brand}}</li>
+                        <li>Model: {{model}}</li>
+                        <li>Speed: {{speed}}</li>
+                        <li>Cores: {{cores}}</li>
+                        <li>Cache: {{cache}}</li>
+                    </ul>
+                    {{/with}} {{!-- with_processor: --}}
+                    <br>
+
+
+                    <b>Memory</b>
+                    {{#with memory}}<ul>
+
+                        <li>Type: {{type}}</li>
+                        <li>Size: {{size}}</li>
+                        <li>Speed {{speed}}</li>
+
+                    </ul>
+                    {{/with}} {{!-- with_memory --}}
+                    <br>
+
+
+                    <b>Storage</b>
+                    {{#with storage}}<ul>
+
+                        <li>Type: {{type}}</li>
+                        <li>Size: {{size}}</li>
+
+                    </ul>
+                    {{/with}} {{!-- with_storage --}}
+                    <br>
+
+
+                    <b>Display</b>
+                    {{#with display}}<ul>
+                        <li>Size: {{size}}</li>
+                        <li>Resolution: {{resolution}}</li>
+                        <li>Technology: {{technology}}</li>
+                        <li>Color space: {{color_space}}</li>
+                        <li>Brightness: {{brightness}}</li>
+                        <li>Refresh rate: {{refresh_rate}}</li>
+
+                    </ul>
+                    {{/with}} {{!-- with_display --}}
+                    <br>
+
+
+                    <b>Graphics</b>
+                    {{#with graphics}}<ul>
+                        <li>Brand: {{brand}}</li>
+                        <li>Model: {{model}}</li>
+                        <li>Memory: {{memory}}</li>
+                    </ul>
+                    {{/with}} {{!-- with_display --}}
+                    <br>
+
+                    <b>Ports</b>
+                    {{#each ports}}<ul>
+                        <li>
+                            Type: {{type}}<br>
+                            Count: {{count}}<br>
+                            {{#if features}}Features: <ul>{{#each features}}<li>{{this}}<br></li>{{/each}}</ul>{{/if}}
+
+                        </li>
+
+                    </ul>
+                    {{/each}} {{!-- with_ports --}}
+                    <br>
+
+
+                    <b>Battery:</b>
+                    {{#with battery}}<ul>
+                        <li>Type: {{type}}</li>
+                        <li>Capacity: {{capacity}}</li>
+                        <li>Life: {{life}}</li>
+                    </ul>
+                    {{/with}} {{!-- with_battery --}}
+                    <br>
+
+
+                    <b>Weight:</b> {{weight}}<br><br>
+
+
+                    <b>Dimensions:</b>
+                    {{#with dimensions}}<ul>
+                        <li>Height: {{height}}</li>
+                        <li>Width: {{width}}</li>
+                        <li>Depth: {{depth}}</li>
+                    </ul>
+                    {{/with}} {{!-- with_dimensions --}}
+                    <br>
+
+
+                    <b>Operating system:</b> {{operating_system}}<br><br>
+
+
+                    <b>Accessories:</b>
+                    {{#each accessories}}<ul>
+                        <li>Name: {{name}}<br>
+                            Price: {{price}}</li><br>
+
+                    </ul>
+                    {{/each}} {{!-- each_accessories --}}
+                    <br>
+
+
+                    {{/with}} {{!-- with_features --}}
+                </div>
+            </div>
+
+
+
+
+        </section>
+    </main>
+</div>
