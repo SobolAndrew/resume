@@ -1,0 +1,103 @@
+<div>
+    <main>
+        <section>
+            <div class="card">
+                <div class="card-body">
+                    {{#with heading}}
+                    {{#with main}}
+                    <div class="card">
+                        <div class="card-body">
+                            <h1>{{title}}</h1>
+                            <p>{{text}}</p>
+                            <div><button type="button" class="btn btn-primary">{{button_text.solid}}</button></div><br>
+                            <div><button type="button" class="btn btn-outline-primary">{{button_text.outline}}</button>
+                            </div><br>
+                        </div>
+                    </div>
+                    {{/with}} {{! -with_main- }}
+                    <br>
+
+                    {{#with second}}
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>{{title}}</h2>
+                            <p class="text-muted">{{text}}</p>
+                            <div><button type="button" class="btn btn-secondary">{{button_text.solid}}</button></div>
+                            <br>
+                            <div><button type="button"
+                                    class="btn btn-outline-secondary">{{button_text.outline}}</button>
+                            </div><br>
+                        </div>
+                    </div>
+                    {{/with}} {{! -with_second- }}
+                    <br>
+
+                    {{#with subblock}}
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="text-muted">{{title}}</h3>
+                            <p>{{text}}</p>
+                            <div><button type="button" class="btn btn-dark">{{button_text.solid}}</button></div>
+                            <br>
+                            <div><button type="button" class="btn btn-outline-dark">{{button_text.outline}}</button>
+                            </div><br>
+                        </div>
+                    </div>
+                    {{/with}} {{! -with_subblock- }}
+                    <br><br>
+                    {{/with}} {{! -with_heading- }}
+                </div>
+            </div><br><br>
+
+            {{#with nested_display}}
+            <div class="card">
+                <div class="card-body">
+                    <div class="display-1"><b>{{title}}</b></div><br>
+
+                    {{#with children_display}}
+                    <div class="card" style="width: 33rem;">
+                        <div class=" card-body">
+                            <div class="display-4">{{title}}</div><br>
+                            <p class="text-capitalize">{{text}}</p><br>
+                            <div><button type="button" class="btn btn-outline-warning">{{button.text}}</button>
+                            </div>
+                            <br>
+                        </div>
+
+                        {{/with}} {{! -with_children_display- }}
+                    </div><br>
+
+                    <h6>{{header_text}}</h6><br>
+                    <div><button type="button" class="btn btn-info">{{button.text}}</button></div>
+                    {{/with}} {{! -with_nested_display- }}
+                </div>
+
+            </div><br><br>
+            <div class="card">
+                <div class="card-body">
+                    {{#with paragraph}}
+                    <div class="text-uppercase"><b>{{title}}</b></div><br>
+                    <div class="text-lowercase">{{text}}</div><br>
+                    <a href="https://google.com" target="_blank" class="btn btn-link">{{button.text}}</a><br>
+                    <br>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul>{{#each list_name}}
+                                <li><a href="{{url}}" target="_blank" class="card-link">{{text}}</a></li>
+                                {{/each}} {{!-- each_list_name --}}
+                            </ul>
+                        </div>
+                    </div>
+                    {{/with}} {{! -with_paragraph- }}
+                    <br>
+                </div>
+            </div>
+
+
+
+
+
+
+        </section>
+    </main>
+</div>
