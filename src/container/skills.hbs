@@ -6,11 +6,11 @@
 <div>
     {{#with main}}
     <main>
-        <section>
+        <section class="my-3">
             {{> title data="All skills" big=true}}
             <ul>
                 {{#each skills}}
-                <li>
+                <li class="pb-2">
                     {{name}}
 
                     {{#if point includeZero=true}} ({{point}}) {{/if}}
@@ -25,11 +25,11 @@
                 {{/each }}
             </ul>
         </section>
-        <section>
+        <section class="my-3">
             {{> title data='My hobbies' }}
             <ol>
                 {{#each hobbies}}
-                <li>
+                <li class="pb-2">
                     {{name}}
                     {{#if isMain}}(favorit){{/if}}
                 </li>
