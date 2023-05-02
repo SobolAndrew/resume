@@ -1,0 +1,173 @@
+<header>
+    {{#with navigation}}
+    <div class="card mb-5 ">
+        <div class="nav">
+            {{#each links}}
+            <div class="nav-item">
+                <a href="{{href}}" target="_blank" class="nav-link">{{text}}</a>
+            </div>
+            {{/each}} {{!-- each_link --}}
+            <a href="#" target="_blank" class="nav-link disabled">Dark дизайн</a>
+        </div>
+    </div>
+    {{/with}} {{!-- with-navigation --}}
+</header>
+
+<main>
+    <section></section>
+    {{#with newsBlock}}
+    <h2 class="text-center">{{title}}</h2>
+    <div class="row">
+        {{#each cards}}
+        <div class="col-3 g-5">
+            <div class="card">
+                <div class="card-body text-bg-dark">
+                    <h5 class="card-title">{{title}}</h5>
+                    {{#if isTop}}<span class="badge rounded-pill text-bg-danger">Top</span> {{/if}}
+                    {{#if isNew}}<span class="badge rounded-pill text-bg-success">New</span> {{/if}}
+                    <p class="card-text">{{description}}</p>
+
+                </div>
+
+            </div>
+        </div>
+        {{/each}} {{!-- each_cards --}}
+    </div>
+
+    {{/with}} {{!-- with-newsBlock --}}
+    </section>
+    <hr class="my-5">
+
+    <section>
+        {{#with goodsBlock}}
+        <div class="row">
+            <ul class="nav nav-tabs">
+                {{#each tabs}}
+                <div class="col-2">
+                    <li class="nav-item">
+                        {{#if isActive}}<a class="nav-link active text-center" aria-current="page" href="#">{{text}}</a>
+                        {{else isDisabled}}<a class="nav-link disabled text-center" href="#">{{text}}</a>
+                        {{else }}<a class="nav-link text-center" href="#">{{text}}</a>{{/if}}
+
+                    </li>
+                </div>
+                {{/each}} {{!-- each_tabs --}}
+            </ul>
+            {{#each cards}}
+            <div class="col-4 g-5">
+                <div class="card">
+                    <img src="{{image}}" class="card-img-top" alt="{{title}}">
+                    <div class="card-body ">
+                        <h5 class="card-title">{{title}}</h5>
+                        {{#if isHot}}<span class="badge rounded-pill text-bg-warning">Hot!</span> {{/if}}
+                        {{#if isNew}}<span class="badge rounded-pill text-bg-primary">New</span> {{/if}}
+                        <p class="card-text">{{description}}</p>
+
+                    </div>
+
+                </div>
+            </div>
+            {{/each}} {{!-- each_cards --}}
+
+        </div>
+
+        {{/with}} {{!-- with-goodsBlock --}}
+    </section>
+    <hr class="my-5">
+
+    <section>
+        {{#with subscribe}}
+        <div class="card text-bg-dark">
+            <div class="card-body">
+                <h2 class="card-title mb-3">{{header}}</h2>
+                <p class="card-text">{{description}}</p>
+                {{#each buttons}}
+                <a href="{{link}}" class="btn btn-primary mb-3">{{text}}</a><br>
+                {{/each}} {{!-- each_buttons --}}
+            </div>
+        </div>
+        {{/with}} {{!-- with-subscribe --}}
+    </section>
+    <hr class="my5">
+
+    <section>
+        {{#with service}}
+        <div class="card text-bg-success ">
+            <div class="card-body">
+                <h2 class="card-title text-center">{{title}}</h2>
+                <p class="card-text text-center py-3">{{description}}</p>
+                {{#each buttons}}
+                <div class="text-center"><a href="{{link}}" class="btn btn-primary  mb-3">{{text}}</a></div>
+                {{/each}} {{!-- each_buttons --}}
+            </div>
+        </div>
+        {{/with}} {{!-- with-service --}}
+    </section>
+    <hr class="mt-5">
+
+    <footer>
+        <div class="row">
+
+            <div class="col-2">
+                <nav class="nav flex-column">
+
+                    <a class="nav-link active" aria-current="page"
+                        href="{{footer.[0].[0].link}}">{{footer.[0].[0].text}}</a>
+
+                    <a class="nav-link" href="{{footer.[0].[1].link}}">{{footer.[0].[1].text}}</a>
+                    <a class="nav-link" href="{{footer.[0].[2].link}}">{{footer.[0].[2].text}}</a>
+                    <a class="nav-link disabled" href="{{footer.[0].[3].link}}">{{footer.[0].[3].text}}</a>
+                </nav>
+            </div>
+
+            <div class="col-2">
+                <nav class="nav flex-column">
+
+                    <a class="nav-link active" aria-current="page"
+                        href="{{footer.[1].[0].link}}">{{footer.[1].[0].text}}</a>
+
+                    <a class="nav-link" href="{{footer.[1].[1].link}}">{{footer.[1].[1].text}}</a>
+                    <a class="nav-link" href="{{footer.[1].[2].link}}">{{footer.[1].[2].text}}</a>
+                    <a class="nav-link disabled" href="{{footer.[1].[3].link}}">{{footer.[1].[3].text}}</a>
+                </nav>
+            </div>
+
+            <div class="col-2">
+                <nav class="nav flex-column">
+
+                    <a class="nav-link active" aria-current="page"
+                        href="{{footer.[2].[0].link}}">{{footer.[2].[0].text}}</a>
+
+                    <a class="nav-link" href="{{footer.[2].[1].link}}">{{footer.[2].[1].text}}</a>
+                    <a class="nav-link" href="{{footer.[2].[2].link}}">{{footer.[2].[2].text}}</a>
+                    <a class="nav-link disabled" href="{{footer.[2].[3].link}}">{{footer.[2].[3].text}}</a>
+
+                </nav>
+            </div>
+
+            <div class="col-2">
+                <nav class="nav flex-column">
+                    <a class="nav-link active" aria-current="page"
+                        href="{{footer.[3].[0].link}}">{{footer.[3].[0].text}}</a>
+
+                    <a class="nav-link" href="{{footer.[3].[1].link}}">{{footer.[3].[1].text}}</a>
+                    <a class="nav-link" href="{{footer.[3].[2].link}}">{{footer.[3].[2].text}}</a>
+                    <a class="nav-link disabled" href="{{footer.[3].[3].link}}">{{footer.[3].[3].text}}</a>
+                </nav>
+            </div>
+
+            <div class="col-2">
+                <nav class="nav flex-column">
+                    <a class="nav-link active" aria-current="page"
+                        href="{{footer.[4].[0].link}}">{{footer.[4].[0].text}}</a>
+
+                    <a class="nav-link" href="{{footer.[4].[1].link}}">{{footer.[4].[1].text}}</a>
+                    <a class="nav-link" href="{{footer.[4].[2].link}}">{{footer.[4].[2].text}}</a>
+                    <a class="nav-link disabled" href="{{footer.[4].[3].link}}">{{footer.[4].[3].text}}</a>
+
+                </nav>
+            </div>
+        </div>
+        </div>
+    </footer>
+</main>

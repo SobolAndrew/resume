@@ -1,20 +1,19 @@
 <div>
     <main>
-        <div>
+        <div class="mb-5">
             <h1>{{name}}</h1>
-        </div><br />
+        </div>
 
-        <div><b>birthdate: </b>{{birthdate}}</div><br />
-        <div><b>birthplace: </b>{{birthplace}}</div><br>
-        <div><b>deathdate: </b>{{deathdate}}</div><br>
-        <div><b>deathplace: </b>{{deathplace}}</div><br>
-        <div><b>nationality: </b>{{nationality}}</div><br>
-        <div><b>occupation: </b>{{occupation}}</div><br>
-        <hr><br>
+        <div class="my-3"><b>birthdate: </b>{{birthdate}}</div>
+        <div><b>birthplace: </b>{{birthplace}}</div>
+        <div class="my-3"><b>deathdate: </b>{{deathdate}}</div>
+        <div><b>deathplace: </b>{{deathplace}}</div>
+        <div class="my-3"><b>nationality: </b>{{nationality}}</div>
+        <div><b>occupation: </b>{{occupation}}</div>
+        <hr class="my-5">
 
         <div><b>Known for: </b>
             <ul>
-
                 {{#each known_for}}
                 <li>{{this}}</li>
                 {{/each}}
@@ -31,14 +30,14 @@
             <ul>{{#each notable_publications}}
                 <li>{{title}}</li>
                 <li>{{year}}</li>
-                <li>{{publisher}}</li><br>{{/each}}
+                <li class="mb-3">{{publisher}}</li>{{/each}}
             </ul>
             <b>Partners: </b>
             <ul>
                 {{#each partners}}
                 <li>{{name}}</li>
                 <li>{{relationship}}</li>
-                <li>{{years}}</li><br>
+                <li class="mb-3">{{years}}</li>
                 {{/each}}
 
             </ul>
@@ -57,13 +56,13 @@
                 {{#each influences}}
                 <li>{{this}}</li>
                 {{/each}}
-            </ul><br>
+            </ul>
             <b>Influenced: </b>
             <ul>
                 {{#each influenced}}
                 <li>{{this}}</li>
                 {{/each}}
-            </ul><br>
+            </ul>
             <b>Quotes: </b>
             <ul>
                 {{#each quotes}}
@@ -85,7 +84,7 @@
                 <li>{{description}}</li>
                 <li>{{year}}</li>
                 <li>{{field}}</li>
-                <br>
+
                 {{/with}}
 
             </ul>
