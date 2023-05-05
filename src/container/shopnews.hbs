@@ -1,0 +1,65 @@
+<main>
+    {{> breadcrumbs}}
+
+
+
+
+
+
+    <section>
+        {{#with newsData}}
+
+
+        <div class="row ">
+            <div class="col-12 g-5">
+                <div class="card">
+                    <img src="{{photo}}" class="card-img" alt="{{info.heading}}">
+                </div>
+            </div>
+            <section>
+                <div class="col ">
+                    {{#with head}}
+                    <h1 class="card-title py-3">{{heading}}</h1>
+                    <p class="text">{{description}}</p>
+                    {{/with}}
+
+                    {{#each body}}
+                    <div class="display-6 ">{{title}}</div>
+                    <p class="text pt-2">{{text}}</p>
+
+                    {{/each}}
+                </div>
+            </section>
+
+
+
+        </div>
+        {{/with}} {{!-- with_newsData--}}
+    </section>
+
+
+    <hr class="my-5">
+
+    <section>
+
+        {{#with newsOtherBlock}}
+        <h2 class="text-center">{{title}}</h2>
+        <div class="row">
+
+
+            {{> shoppost}}
+
+
+
+        </div> {{/with}} {{!-- with_newsOtherBlock --}}
+
+        {{> shopaction}}
+
+
+    </section>
+
+
+
+
+
+</main>
