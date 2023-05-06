@@ -28,102 +28,86 @@
 
             <div class="col-5 ms-5">
                 {{#with item}}
-                {{!-- <div class="card"> --}}
 
-                    <table class="table table-bordered">
-                        <thead>
-                            {{#each head}}
-                            <th> {{this}}</th>
+
+                <table class="table table-bordered">
+                    <thead>
+                        {{#each head}}
+                        <th> {{this}}</th>
+                        {{/each}}
+                    </thead>
+
+                    <tbody>
+                        {{#each body}}
+                        <tr>
+                            {{#each this}}
+                            {{#if @first}}
+                            <th>{{this}}</th>
+                            {{else}}
+                            <td>{{this}}</td>
+                            {{/if}}
                             {{/each}}
-                        </thead>
+                        </tr>
+                        {{/each}}
 
-                        <tbody>
-                            <tr>
-                                {{#each body.[0]}}
-                                {{#if @first}}
-                                <th>{{this}}</th>
-                                {{else}}
-                                <td>{{this}}</td>
-                                {{/if}}
-                                {{/each}}
-                            </tr>
-                            <tr>
-                                {{#each body.[1]}}
-                                {{#if @first}}
-                                <th>{{this}}</th>
-                                {{else}}
-                                <td>{{this}}</td>
-                                {{/if}}
-                                {{/each}}
-                            </tr>
-
-                            <tr>
-                                {{#each body.[2]}}
-                                {{#if @first}}
-                                <th>{{this}}</th>
-                                {{else}}
-                                <td>{{this}}</td>
-                                {{/if}}
-                                {{/each}}
-                            </tr>
-                        </tbody>
-                    </table>
+                    </tbody>
+                </table>
 
 
-                </div> {{/with}} {{!-- with_item --}}
+            </div> {{/with}} {{!-- with_item --}}
 
-                <div class="col-6 px-2">
-                    {{#with info}}
-                    <div class="card">
+            <div class="col-6 px-2">
+                {{#with info}}
+                <div class="card">
 
-                        <div class="card-body ">
-                            <h5 class="card-title">{{title}}</h5>
-                            <p class="card-text">{{about}}</p>
-                            <p class="display-6">{{price}}</p>
-                            {{#each category}}
-                            {{#if isHot}}<span class="badge rounded-pill text-bg-warning">{{name}}</span> {{/if}}
-                            {{#if isNew}}<span class="badge rounded-pill text-bg-primary">{{name}}</span> {{/if}}
-                            {{#if isBonus}}<span class="badge rounded-pill text-bg-info">{{name}}</span> {{/if}}
-                            {{/each}}
-
-                        </div>
+                    <div class="card-body ">
+                        <h5 class="card-title">{{title}}</h5>
+                        <p class="card-text">{{about}}</p>
+                        <p class="display-6">{{price}}</p>
+                        {{#each category}}
+                        {{#if isHot}}<span class="badge rounded-pill text-bg-warning">{{name}}</span> {{/if}}
+                        {{#if isNew}}<span class="badge rounded-pill text-bg-primary">{{name}}</span> {{/if}}
+                        {{#if isBonus}}<span class="badge rounded-pill text-bg-info">{{name}}</span> {{/if}}
+                        {{/each}}
 
                     </div>
-                    {{/with}} {{!-- with_info --}}
+
                 </div>
+                {{/with}} {{!-- with_info --}}
+            </div>
 
-                <div class="col-5 ms-5">
-                    {{#with param}}
-                    <div class="card">
+            <div class="col-5 ms-5">
+                {{#with param}}
+                <div class="card">
 
-                        <div class="card-header">
-                            {{title}}
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            {{#each list}}
-                            <li class="list-group-item">{{this}}</li>
-
-                            {{/each}}
-                        </ul>
+                    <div class="card-header">
+                        {{title}}
                     </div>
-                    {{/with}} {{!-- with_param --}}
+                    <ul class="list-group list-group-flush">
+                        {{#each list}}
+                        <li class="list-group-item">{{this}}</li>
 
-                    {{#with alert}}
-                    {{#if isError}}
-                    <div class="alert alert-danger mt-3" role="alert">
-                        {{text}}
-                    </div>
-                    {{/if}}
-                    {{/with}}
-
-
+                        {{/each}}
+                    </ul>
                 </div>
+                {{/with}} {{!-- with_param --}}
 
-
-                {{!-- <div class="col-5 ms-5">
-
-                    --}}
+                {{#with alert}}
+                {{#if isError}}
+                <div class="alert alert-danger mt-3" role="alert">
+                    {{text}}
                 </div>
+                {{/if}}
+                {{/with}}
+
+
+            </div>
+
+
+            {{!-- <div class="col-5 ms-5">
+
+                --}}
+            </div>
     </section>
 
     <section>
