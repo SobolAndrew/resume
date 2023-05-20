@@ -2,20 +2,33 @@
 <footer>
     <hr class="my-5">
     <div>
-        {{#with social}}
-        {{> link text=email.text href=email.href blank=true }}
-        {{> link text=phone.text href=phone.href blank=true }}
-        {{> link text=linkedin.text href=linkedin.href blank=true line=false noLine=true}}
 
-        {{/with}}
+        <nav aria-label="breadcrumb">
+            {{#with social}}
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">{{> link text=email.text href=email.href blank=true }}</li>
+                <li class="breadcrumb-item">{{> link text=phone.text href=phone.href blank=true }}</li>
+                <li class="breadcrumb-item "> {{> link text=linkedin.text href=linkedin.href blank=true}}</li>
+            </ol>
+
+
+            {{/with}}
+
+
+        </nav>
+        <div class="ps-4">
+            <div class="my-3">
+                <em>Copiright by {{../header.name.firstname}} {{../header.name.lastname}}</em>
+            </div>
+
+
+            <address>{{../header.address}}</address>
+        </div>
+
     </div>
 
-    <div class="my-3">
-        <em>Copiright by {{../header.name.firstname}} {{../header.name.lastname}}</em>
-    </div>
 
-    <div>
-        <address>{{../header.address}}</address>
-    </div>
+
+
 </footer>
 {{/with}}

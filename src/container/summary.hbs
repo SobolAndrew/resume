@@ -4,29 +4,31 @@
 --}}
 
 <div>
-    {{#with main}}
+
     <main>
         <section class="mb-5">
-            {{> title data=summary.title big=true}}
-            <div>
-                <p>
-                    {{summary.text}}
-                </p>
-            </div>
-        </section>
+            <div class="row">
+                {{#each main}}
+                <div class="col-6">{{#with this}}
+                    <div class="card">
+                        <div class="card-body">
 
-        {{#with experience}}
-        <section>
-            {{> title data=title}}
-            <div>
-                <p>
-                    {{text}}
-                </p>
+                            <h2 class="card-title mb-4">{{title}}</h2>
+                            <p>
+                                {{text}}
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    {{/with}}
+                </div>
+                {{/each}}
             </div>
         </section>
-        {{/with}}
     </main>
-    {{/with}}
+
 </div>
 
 {{!--

@@ -7,23 +7,23 @@
         {{#each address}}
         {{this}}
         {{/each}}
-    </address><br>
-    <hr>
+    </address>
     {{/with}}
+    <hr class="my-5">
 </header>
 
 <main>
     {{#with person}}
     <section>
         {{> title data="Education:" big=true}}
-        {{#with education}}
-        <p><b>Degree</b> - {{[0].degree}}</p>
-        <p><b>Major</b> - {{[0].major}}</p>
-        <p><b>University</b> - {{[0].university}}</p>
-        <p><b>Graduation Year</b> - {{[0].graduationYear}}</p>
-        {{/with}}
+        {{#each education}}
+        <p><b>Degree</b> - {{degree}}</p>
+        <p><b>Major</b> - {{major}}</p>
+        <p><b>University</b> - {{university}}</p>
+        <p><b>Graduation Year</b> - {{graduationYear}}</p>
+        {{/each}}
     </section>
-    <hr><br>
+    <hr class="my-5">
     <section>
         {{> title data="Work Experience:" big=true}}
         {{#each workExperience}}

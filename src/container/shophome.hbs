@@ -1,18 +1,3 @@
-<header>
-    {{#with navigation}}
-    <div class="card mb-5 ">
-        <div class="nav">
-            {{#each links}}
-            <div class="nav-item">
-                <a href="{{href}}" target="_blank" class="nav-link">{{text}}</a>
-            </div>
-            {{/each}} {{!-- each_link --}}
-            <a href="#" target="_blank" class="nav-link disabled">Dark дизайн</a>
-        </div>
-    </div>
-    {{/with}} {{!-- with-navigation --}}
-</header>
-
 <main>
     <section></section>
     {{#with newsBlock}}
@@ -31,7 +16,9 @@
 
             </div>
         </div>
-        {{/each}} {{!-- each_cards --}}
+        {{/each}}{{!-- each_cards --}}
+
+        {{!-- {{> shoppost}} --}}
     </div>
 
     {{/with}} {{!-- with-newsBlock --}}
@@ -53,21 +40,8 @@
                 </div>
                 {{/each}} {{!-- each_tabs --}}
             </ul>
-            {{#each cards}}
-            <div class="col-4 g-5">
-                <div class="card">
-                    <img src="{{image}}" class="card-img-top" alt="{{title}}">
-                    <div class="card-body ">
-                        <h5 class="card-title">{{title}}</h5>
-                        {{#if isHot}}<span class="badge rounded-pill text-bg-warning">Hot!</span> {{/if}}
-                        {{#if isNew}}<span class="badge rounded-pill text-bg-primary">New</span> {{/if}}
-                        <p class="card-text">{{description}}</p>
+            {{> shopcard}}
 
-                    </div>
-
-                </div>
-            </div>
-            {{/each}} {{!-- each_cards --}}
 
         </div>
 
@@ -88,104 +62,13 @@
         </div>
         {{/with}} {{!-- with-subscribe --}}
     </section>
-    <hr class="my5">
 
-    <section>
-        {{#with service}}
-        <div class="card text-bg-success ">
-            <div class="card-body">
-                <h2 class="card-title text-center">{{title}}</h2>
-                <p class="card-text text-center py-3">{{description}}</p>
-                {{#each buttons}}
-                <div class="text-center"><a href="{{link}}" class="btn btn-primary  mb-3">{{text}}</a></div>
-                {{/each}} {{!-- each_buttons --}}
-            </div>
-        </div>
-        {{/with}} {{!-- with-service --}}
-    </section>
-    <hr class="mt-5">
 
-    <footer>
-        <div class="row">
-
-            <div class="col-2">
-                <nav class="nav flex-column">
-
-                    <a class="nav-link active" aria-current="page"
-                        href="{{footer.[0].[0].link}}">{{footer.[0].[0].text}}</a>
-
-                    <a class="nav-link" href="{{footer.[0].[1].link}}">{{footer.[0].[1].text}}</a>
-                    <a class="nav-link" href="{{footer.[0].[2].link}}">{{footer.[0].[2].text}}</a>
-                    <a class="nav-link disabled" href="{{footer.[0].[3].link}}">{{footer.[0].[3].text}}</a>
-                </nav>
-            </div>
-
-            <div class="col-2">
-                <nav class="nav flex-column">
-
-                    <a class="nav-link active" aria-current="page"
-                        href="{{footer.[1].[0].link}}">{{footer.[1].[0].text}}</a>
-
-                    <a class="nav-link" href="{{footer.[1].[1].link}}">{{footer.[1].[1].text}}</a>
-                    <a class="nav-link" href="{{footer.[1].[2].link}}">{{footer.[1].[2].text}}</a>
-                    <a class="nav-link disabled" href="{{footer.[1].[3].link}}">{{footer.[1].[3].text}}</a>
-                </nav>
-            </div>
-
-            <div class="col-2">
-                <nav class="nav flex-column">
-
-                    <a class="nav-link active" aria-current="page"
-                        href="{{footer.[2].[0].link}}">{{footer.[2].[0].text}}</a>
-
-                    <a class="nav-link" href="{{footer.[2].[1].link}}">{{footer.[2].[1].text}}</a>
-                    <a class="nav-link" href="{{footer.[2].[2].link}}">{{footer.[2].[2].text}}</a>
-                    <a class="nav-link disabled" href="{{footer.[2].[3].link}}">{{footer.[2].[3].text}}</a>
-
-                </nav>
-            </div>
-
-            <div class="col-2">
-                <nav class="nav flex-column">
-                    <a class="nav-link active" aria-current="page"
-                        href="{{footer.[3].[0].link}}">{{footer.[3].[0].text}}</a>
-
-                    <a class="nav-link" href="{{footer.[3].[1].link}}">{{footer.[3].[1].text}}</a>
-                    <a class="nav-link" href="{{footer.[3].[2].link}}">{{footer.[3].[2].text}}</a>
-                    <a class="nav-link disabled" href="{{footer.[3].[3].link}}">{{footer.[3].[3].text}}</a>
-                </nav>
-            </div>
-
-            <div class="col-2">
-                <nav class="nav flex-column">
-                    <a class="nav-link active" aria-current="page"
-                        href="{{footer.[4].[0].link}}">{{footer.[4].[0].text}}</a>
-
-                    <a class="nav-link" href="{{footer.[4].[1].link}}">{{footer.[4].[1].text}}</a>
-                    <a class="nav-link" href="{{footer.[4].[2].link}}">{{footer.[4].[2].text}}</a>
-                    <a class="nav-link disabled" href="{{footer.[4].[3].link}}">{{footer.[4].[3].text}}</a>
-
-                </nav>
-            </div>
-        </div>
-
-        <hr class="my-5">
-
-        <div class="row">
-            {{#each footer}}
-            <div class="col-2">
-                <nav class="nav flex-column">
-
-                    {{text}}
+    {{> shopaction}}
 
 
 
-                </nav>
-            </div>
-            {{/each}}
 
 
 
-        </div>
-    </footer>
 </main>

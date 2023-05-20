@@ -4,17 +4,18 @@
             {{> title data='JavaScript' big=true}}
 
 
-            <hr>
-            <div><b>Description:</b> <em>{{description}}</em></div><br>
-            <div><b>History:</b><br>
-                {{#with history}}
-                Year: {{year}}<br>
-                Founder: {{founder}}<br>
-                {{/with}}</div> {{!-- with_history --}}
-            <br>
+            <hr class="mb-5">
+
+            <div class="my-3"><b>Description:</b> <em>{{description}}</em></div>
+            <div><b>History:</b></div>
+            {{#with history}}
+            <div>Year: {{year}}</div>
+            <div>Founder: {{founder}}</div>
+            {{/with}} {{!-- with_history --}}
+
 
             {{> title data='Types:'}}
-            <div class="dropdown">
+            <div class="dropdown mb-5">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     Types
@@ -24,13 +25,13 @@
                     {{/each}}
                 </ul>
             </div>
-            <br>
+
 
 
             {{> title data='Syntax:'}}
 
             {{#with syntax}}
-            <div class="dropdown">
+            <div class="dropdown mb-5">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     Variables
@@ -76,11 +77,11 @@
                     {{/each}}
                 </ul>
 
-            </div><br>
+            </div>
             {{/with}} {{!-- with_syntax --}}
 
             {{> title data='Features:'}}
-            <div class="dropdown">
+            <div class="dropdown mb-5">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     Features
@@ -90,10 +91,10 @@
                     {{/each}}
                 </ul>
             </div>
-            <br>
+
 
             {{> title data='Libraries:'}}
-            <div class="dropdown">
+            <div class="dropdown mb-5">
                 <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     Libraries
@@ -103,10 +104,10 @@
                     {{/each}}
                 </ul>
             </div>
-            <br>
+
 
             {{> title data='Tools:'}}
-            <div class="dropdown">
+            <div class="dropdown mb-5">
                 <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     Tools
@@ -116,10 +117,10 @@
                     {{/each}}
                 </ul>
             </div>
-            <br>
+
 
             {{> title data='Community:'}}
-            <div class="dropdown">
+            <div class="dropdown mb-5">
                 <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     Community
@@ -129,7 +130,7 @@
                     {{/each}}
                 </ul>
             </div>
-            <br>
+
 
 
 

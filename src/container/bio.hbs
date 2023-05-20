@@ -19,7 +19,7 @@
                 {{/each}}
             </ul>
             <b>Education: </b>
-            <ul>{{#each education}}
+            <ul class="mb-3">{{#each education}}
                 <li>{{degree}}</li>
                 <li>{{field}}</li>
                 <li>{{institution}}</li>
@@ -27,58 +27,58 @@
                 {{/each}}
             </ul>
             <b>Notable publications: </b>
-            <ul>{{#each notable_publications}}
+            <ul class="mb-3">{{#each notable_publications}}
                 <li>{{title}}</li>
                 <li>{{year}}</li>
-                <li class="mb-3">{{publisher}}</li>{{/each}}
+                <li>{{publisher}}</li>{{/each}}
             </ul>
             <b>Partners: </b>
-            <ul>
+            <ul class="mb-3">
                 {{#each partners}}
                 <li>{{name}}</li>
                 <li>{{relationship}}</li>
-                <li class="mb-3">{{years}}</li>
+                <li>{{years}}</li>
                 {{/each}}
 
             </ul>
             <b>Awards: </b>
-            <ul>
+            <ul class="mb-3">
                 {{#each awards}}
                 <li>{{title}}</li>
                 <li>{{year}}</li>
-                <li>{{description}}</li><br>
+                <li>{{description}}</li>
                 {{/each}}
 
             </ul>
 
             <b>Influences: </b>
-            <ul>
+            <ul class="mb-3">
                 {{#each influences}}
                 <li>{{this}}</li>
                 {{/each}}
             </ul>
             <b>Influenced: </b>
-            <ul>
+            <ul class="mb-3">
                 {{#each influenced}}
                 <li>{{this}}</li>
                 {{/each}}
             </ul>
             <b>Quotes: </b>
-            <ul>
+            <ul class="mb-3">
                 {{#each quotes}}
                 <li><q>{{this}}</q></li>
                 {{/each}}
             </ul><br>
             <b>Major discoveries: </b>
-            <ul>
+            <ul class="mb-3">
                 {{#each major_discoveries}}
                 <li>{{title}}</li>
                 <li>{{year}}</li>
-                <li>{{description}}</li><br>
+                <li>{{description}}</li>
                 {{/each}}
 
             </ul><b>Contributions: </b>
-            <ul>
+            <ul class="mb-3">
                 {{#with contributions}}
                 <li>{{title}}</li>
                 <li>{{description}}</li>

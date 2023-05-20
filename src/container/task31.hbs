@@ -194,53 +194,41 @@
         {{/with}} {{! -with_proposition- }}
     </section>
     <hr>
-    <section>
+    <footer>
 
 
-        <table>
-            {{#with footer}}<h5>{{title}}</h5>
-            <tbody>
-                <tr class="row g-5">
+        <div class="row ">
 
-                    <th class="col">
-                        <a href="{{navigation.[0].href}}" class="btn btn-link">{{navigation.[0].text}}</a>
-                    </th>
-                    <th class="col"><a href="{{socialMedia.[0].link}}"
-                            class="btn btn-outline-dark">{{socialMedia.[0].name}}</a>
-                    </th>
-                    <th class="col"><a href="{{partners.[0].link}}"
-                            class="btn btn-outline-info">{{partners.[0].name}}</a>
-                    </th>
-                </tr>
 
-                <tr class="row g-5">
+            {{#with footer}}
+            <h5>{{title}}</h5>
 
-                    <th class="col">
-                        <a href="{{navigation.[1].href}}" class="btn btn-link">{{navigation.[1].text}}</a>
-                    </th>
-                    <th class="col"><a href="{{socialMedia.[1].link}}"
-                            class="btn btn-outline-dark">{{socialMedia.[1].name}}</a>
-                    </th>
-                    <th class="col"><a href="{{partners.[1].link}}"
-                            class="btn btn-outline-info">{{partners.[1].name}}</a>
-                    </th>
-                </tr>
+            <div class="col-3">
+                {{#each navigation}}
+                <div class="col">
+                    <a href="{{href}}" class="btn btn-link my-3">{{text}}</a>
+                </div>
+                {{/each}} {{!-- navigation --}}
+            </div>
 
-                <tr class="row g-5">
 
-                    <th class="col">
-                        <a href="{{navigation.[2].href}}" class="btn btn-link">{{navigation.[2].text}}</a>
-                    </th>
-                    <th class="col"><a href="{{socialMedia.[2].link}}"
-                            class="btn btn-outline-dark">{{socialMedia.[2].name}}</a>
-                    </th>
-                    <th class="col"><a href="{{partners.[2].link}}"
-                            class="btn btn-outline-info">{{partners.[2].name}}</a>
-                    </th>
-                </tr>
-            </tbody>
+            <div class="col-3">
+                {{#each socialMedia}}
+                <div class="col">
+                    <a href="{{link}}" class="btn btn-outline-dark my-3">{{name}}</a>
+                </div>
+                {{/each}} {{!-- navigation --}}
+            </div>
+
+            <div class="col-3">
+                {{#each partners}}
+                <div class="col">
+                    <a href="{{link}}" class="btn btn-outline-info my-3">{{name}}</a>
+                </div>
+                {{/each}} {{!-- navigation --}}
+            </div>
+
             {{/with}} {{! -footer- }}
-        </table>
 
-    </section>
+    </footer>
 </main>

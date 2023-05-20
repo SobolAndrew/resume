@@ -4,12 +4,12 @@
             {{> title data='Car' big=true}}
 
 
-            <hr>
+            <hr class="my-4">
             <div><b>Make:</b> {{make}}</div>
             <div><b>Model:</b> {{model}}</div>
             <div><b>Year:</b> {{year}}</div>
-            <div><b>Color:</b> {{color}}</div><br>
-            <hr>
+            <div><b>Color:</b> {{color}}</div>
+            <hr class="my-5">
 
             <div>
                 {{#with features}}
@@ -18,7 +18,7 @@
                 {{#with interior}}
 
                 {{#with seats}}
-                <div class="btn-group">
+                <div class="btn-group mb-3">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Seats
@@ -33,7 +33,7 @@
                 {{/with}} {{!-- with_seats --}}
 
                 {{#with dashboard}}
-                <div class="btn-group">
+                <div class="btn-group mb-3">
                     <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Dashboard
@@ -50,7 +50,7 @@
                 {{/with}} {{!-- with_dashboard --}}
 
                 {{#with audio}}
-                <div class="btn-group">
+                <div class="btn-group mb-3">
                     <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Audio
@@ -64,8 +64,10 @@
                     </ul>
                 </div>
                 {{/with}} {{!-- with_audio --}}
-                <br>
-                <hr>
+
+                <hr class="my-4">
+
+
                 {{/with}} {{!-- with_interior --}}
 
                 {{> title data='Exterior'}}
@@ -116,8 +118,8 @@
                 {{/with}} {{!-- with_sunroof --}}
 
                 {{/with}} {{!-- with_exterior --}}
-                <br>
-                <hr>
+
+                <hr class="my-5">
 
                 {{>title data='Safety'}}
 
@@ -162,8 +164,8 @@
 
                 {{/with}} {{!-- with_safety --}}
                 {{/with}} {{!-- with_feature --}}
-                <br>
-                <hr>
+
+                <hr class="my-5">
 
                 {{> title data='Engine'}}
                 {{#with engine}}
@@ -187,8 +189,8 @@
 
 
                 {{/with}} {{!-- with_engine --}}
-                <br>
-                <hr>
+
+                <hr class="my-5">
 
                 {{> title data='Fuel economy' }}
                 {{#with fuel_economy}} <div class="btn-group">
@@ -204,8 +206,8 @@
                     </ul>
                 </div>
                 {{/with}} {{!-- with_fuel_economy --}}
-                <br>
-                <hr>
+
+                <hr class="my-5">
                 {{> title data='Price'}}
                 {{#with price}} <div class="btn-group">
                     <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
