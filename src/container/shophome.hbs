@@ -1,26 +1,26 @@
 <main>
-    <section></section>
-    {{#with newsBlock}}
-    <h2 class="text-center">{{title}}</h2>
-    <div class="row">
-        {{#each cards}}
-        <div class="col-3 g-5">
-            <div class="card">
-                <div class="card-body text-bg-dark">
-                    <h5 class="card-title">{{title}}</h5>
-                    {{#if isTop}}<span class="badge rounded-pill text-bg-danger">Top</span> {{/if}}
-                    {{#if isNew}}<span class="badge rounded-pill text-bg-success">New</span> {{/if}}
-                    <p class="card-text">{{description}}</p>
+    <section>
+        {{#with newsBlock}}
+        <h2 class="text-center">{{title}}</h2>
+        <div class="row">
+            {{#each cards}}
+            <div class="col-3 g-5">
+                <div class="card">
+                    <div class="card-body text-bg-dark">
+                        <h5 class="card-title">{{title}}</h5>
+                        {{#if isTop}}<span class="badge rounded-pill text-bg-danger">Top</span> {{/if}}
+                        {{#if isNew}}<span class="badge rounded-pill text-bg-success">New</span> {{/if}}
+                        <p class="card-text">{{description}}</p>
+
+                    </div>
 
                 </div>
-
             </div>
+            {{/each}}{{!-- each_cards --}}
+
+            {{!-- {{> shoppost}} --}}
         </div>
-        {{/each}}{{!-- each_cards --}}
-
-        {{!-- {{> shoppost}} --}}
-    </div>
-
+    </section>
     {{/with}} {{!-- with-newsBlock --}}
     </section>
     <hr class="my-5">
