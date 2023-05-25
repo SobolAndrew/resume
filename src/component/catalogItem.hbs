@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-body">
+        <img src="{{img}}" class="card-img-top" alt="{{name}}">
+        <div class="mb-3">{{#if isHot}}<span class="badge rouded-pill bg-warning">HOT!</span>{{/if}}
+            {{#if isNew}}<span class="badge rouded-pill bg-primary">Нове</span>{{/if}}</div>
+        <div>{{#if isFast}}<span class="badge  bg-success">Швидка доставка</span>{{/if}}</div>
+        <div>{{#if isFree}}<span class="badge  bg-secondary">Безкоштовна доставка</span>{{/if}}
+        </div>
+
+        <h5 class="card-title my-3">{{name}}</h5>
+
+        {{#with review}}
+        <p>{{amount}} {{text}}</p>
+        {{/with}}
+        <h4 class="card-text">{{price}}</h4>
+        <p>{{delivery}}</p>
+
+        {{#each buttons}}
+        <a href="{{link}}" class="btn 
+                            {{#if isPrimary}}btn-primary{{/if}}
+                            {{#if isSecondary}}btn-secondary{{/if}} mb-3">{{text}}</a>
+        {{/each}}
+        <ul>
+            {{#each characteristics}}
+            <li class="mb-2">{{title}}: {{value}}{{#if @first}}"{{/if}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
