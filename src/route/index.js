@@ -3820,7 +3820,125 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
+// ================================================================
+router.get('/index', function (req, res) {
+  // res.render генерує нам HTML сторінку
 
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index', {
+    layout: 'index',
+    resumeProject: {
+      name: 'Андрій Соболь',
+      document: 'Resume project',
+      title: 'Список сторінок',
+      description: [
+        {
+          text: 'Let’s be honest right from the start. No matter how many books about programming you read, videos you watch, or podcasts you listen to, you must practice continuously if you want to become a better developer.',
+        },
+
+        {
+          text: 'In the front-end space, many frameworks exist — React, Angular, Vue, and Svelte, to name a few. Every single one of them is awesome; without them, front-end development wouldn’t be in its current state. But what those frameworks, besides all their differences, have in common is that they are all based on JavaScript. Yep, good ol’ JS!',
+        },
+      ],
+      links: [
+        {
+          text: 'Bio',
+          href: 'http://localhost:3000/bio',
+        },
+        {
+          text: 'Car',
+          href: 'http://localhost:3000/car',
+        },
+        {
+          text: 'Facebook',
+          href: 'http://localhost:3000/facebook',
+        },
+        {
+          text: 'Education',
+          href: 'http://localhost:3000/education',
+        },
+        {
+          text: 'Js',
+          href: 'http://localhost:3000/js',
+        },
+        {
+          text: 'Mac',
+          href: 'http://localhost:3000/mac',
+        },
+        {
+          text: 'Person',
+          href: 'http://localhost:3000/person',
+        },
+        {
+          text: 'Program',
+          href: 'http://localhost:3000/program',
+        },
+        {
+          text: 'Shopcart',
+          href: 'http://localhost:3000/shopcart',
+        },
+        {
+          text: 'Shopcatalog',
+          href: 'http://localhost:3000/shopcatalog',
+        },
+        {
+          text: 'Shophome',
+          href: 'http://localhost:3000/shophome',
+        },
+        {
+          text: 'Shopnews',
+          href: 'http://localhost:3000/shopnews',
+        },
+        {
+          text: 'Shoporder',
+          href: 'http://localhost:3000/shoporder',
+        },
+        {
+          text: 'Shopproduct',
+          href: 'http://localhost:3000/shopproduct',
+        },
+        {
+          text: 'Shopprofile',
+          href: 'http://localhost:3000/shopprofile',
+        },
+        {
+          text: 'Shopreview',
+          href: 'http://localhost:3000/shopreview',
+        },
+        {
+          text: 'Skills',
+          href: 'http://localhost:3000/education',
+        },
+        {
+          text: 'Summary',
+          href: 'http://localhost:3000/summary',
+        },
+        {
+          text: 'Task21',
+          href: 'http://localhost:3000/task21',
+        },
+        {
+          text: 'Task22',
+          href: 'http://localhost:3000/task22',
+        },
+        {
+          text: 'Task31',
+          href: 'http://localhost:3000/task31',
+        },
+        {
+          text: 'Web',
+          href: 'http://localhost:3000/web',
+        },
+        {
+          text: 'Work',
+          href: 'http://localhost:3000/work',
+        },
+      ],
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+// ================================================================
 // ================================================================
 
 // Підключаємо роутер до бек-енду
