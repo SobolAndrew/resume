@@ -34,17 +34,6 @@ var footer = {
 
 // ================================================================
 
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -3821,7 +3810,7 @@ router.get('/shopcatalog', function (req, res) {
 
 // ================================================================
 // ================================================================
-router.get('/index', function (req, res) {
+router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
@@ -3843,95 +3832,95 @@ router.get('/index', function (req, res) {
       links: [
         {
           text: 'Bio',
-          href: 'http://localhost:3000/bio',
+          href: 'http://bio',
         },
         {
           text: 'Car',
-          href: 'http://localhost:3000/car',
+          href: 'http://car',
         },
         {
           text: 'Facebook',
-          href: 'http://localhost:3000/facebook',
+          href: 'http://facebook',
         },
         {
           text: 'Education',
-          href: 'http://localhost:3000/education',
+          href: 'http://education',
         },
         {
           text: 'Js',
-          href: 'http://localhost:3000/js',
+          href: 'http://js',
         },
         {
           text: 'Mac',
-          href: 'http://localhost:3000/mac',
+          href: 'http://mac',
         },
         {
           text: 'Person',
-          href: 'http://localhost:3000/person',
+          href: 'http://person',
         },
         {
           text: 'Program',
-          href: 'http://localhost:3000/program',
+          href: 'http://program',
         },
         {
           text: 'Shopcart',
-          href: 'http://localhost:3000/shopcart',
+          href: 'http://shopcart',
         },
         {
           text: 'Shopcatalog',
-          href: 'http://localhost:3000/shopcatalog',
+          href: 'http://shopcatalog',
         },
         {
           text: 'Shophome',
-          href: 'http://localhost:3000/shophome',
+          href: 'http://shophome',
         },
         {
           text: 'Shopnews',
-          href: 'http://localhost:3000/shopnews',
+          href: 'http://shopnews',
         },
         {
           text: 'Shoporder',
-          href: 'http://localhost:3000/shoporder',
+          href: 'http://shoporder',
         },
         {
           text: 'Shopproduct',
-          href: 'http://localhost:3000/shopproduct',
+          href: 'http://shopproduct',
         },
         {
           text: 'Shopprofile',
-          href: 'http://localhost:3000/shopprofile',
+          href: 'http://shopprofile',
         },
         {
           text: 'Shopreview',
-          href: 'http://localhost:3000/shopreview',
+          href: 'http://shopreview',
         },
         {
           text: 'Skills',
-          href: 'http://localhost:3000/education',
+          href: 'http://education',
         },
         {
           text: 'Summary',
-          href: 'http://localhost:3000/summary',
+          href: 'http://summary',
         },
         {
           text: 'Task21',
-          href: 'http://localhost:3000/task21',
+          href: 'http://task21',
         },
         {
           text: 'Task22',
-          href: 'http://localhost:3000/task22',
+          href: 'http://task22',
         },
         {
           text: 'Task31',
-          href: 'http://localhost:3000/task31',
+          href: 'http://task31',
         },
         {
           text: 'Web',
-          href: 'http://localhost:3000/web',
+          href: 'http://web',
         },
         {
           text: 'Work',
-          href: 'http://localhost:3000/work',
+          href: 'http://work',
         },
       ],
     },
