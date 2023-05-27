@@ -3831,96 +3831,73 @@ router.get('/', function (req, res) {
       ],
       links: [
         {
-          text: 'Bio',
-          href: 'http://bio',
+          text: 'bio',
         },
         {
-          text: 'Car',
-          href: 'http://car',
+          text: 'car',
         },
         {
-          text: 'Facebook',
-          href: 'http://facebook',
+          text: 'facebook',
         },
         {
-          text: 'Education',
-          href: 'http://education',
+          text: 'education',
         },
         {
-          text: 'Js',
-          href: 'http://js',
+          text: 'js',
         },
         {
-          text: 'Mac',
-          href: 'http://mac',
+          text: 'mac',
         },
         {
-          text: 'Person',
-          href: 'http://person',
+          text: 'person',
         },
         {
-          text: 'Program',
-          href: 'http://program',
+          text: 'program',
         },
         {
-          text: 'Shopcart',
-          href: 'http://shopcart',
+          text: 'shopcart',
         },
         {
-          text: 'Shopcatalog',
-          href: 'http://shopcatalog',
+          text: 'shopcatalog',
         },
         {
-          text: 'Shophome',
-          href: 'http://shophome',
+          text: 'shophome',
         },
         {
-          text: 'Shopnews',
-          href: 'http://shopnews',
+          text: 'shopnews',
         },
         {
-          text: 'Shoporder',
-          href: 'http://shoporder',
+          text: 'shoporder',
         },
         {
-          text: 'Shopproduct',
-          href: 'http://shopproduct',
+          text: 'shopproduct',
         },
         {
-          text: 'Shopprofile',
-          href: 'http://shopprofile',
+          text: 'shopprofile',
         },
         {
-          text: 'Shopreview',
-          href: 'http://shopreview',
+          text: 'shopreview',
         },
         {
-          text: 'Skills',
-          href: 'http://education',
+          text: 'skills',
         },
         {
-          text: 'Summary',
-          href: 'http://summary',
+          text: 'summary',
         },
         {
-          text: 'Task21',
-          href: 'http://task21',
+          text: 'task21',
         },
         {
-          text: 'Task22',
-          href: 'http://task22',
+          text: 'task22',
         },
         {
-          text: 'Task31',
-          href: 'http://task31',
+          text: 'task31',
         },
         {
-          text: 'Web',
-          href: 'http://web',
+          text: 'web',
         },
         {
-          text: 'Work',
-          href: 'http://work',
+          text: 'work',
         },
       ],
     },
